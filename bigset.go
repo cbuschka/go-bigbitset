@@ -8,7 +8,8 @@ type BitSet interface {
 	// Set the bit at position pos, counted from zero.
 	Set(pos uint64)
 	// Test if the bit at position pos is set, pos counted from zero.
+	// Returns false if bit is out of range.
 	IsSet(pos uint64) bool
-	IsEmpty() bool
+	// Returns true if no bit is set to 0.
 	IsComplete() bool
 }
